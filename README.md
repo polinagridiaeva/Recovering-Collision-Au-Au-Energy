@@ -63,13 +63,6 @@ RMSE of the reconstructed energy on the test set, and relative error $\varepsilo
 └── README.md
 ```
 
-The notebook covers:
-- geometry of the detector and projection of particle trajectories onto the detector plane;
-- assignment of hits to pads and construction of the feature vector;
-- spectator filtering and computation of the released energy;
-- the fully connected and hybrid (Conv2D) regressors and the training loop;
-- evaluation: RMSE, predicted-vs-true plots, and error histograms with Gaussian fits for low, mid and high energies.
-
 ## Data
 
 The QGSM-simulated events (`data_*.dat`, 100 files × 2000 events) are not included in this repository because of their size. To run the notebook, update the data path in the loading cell.
@@ -78,12 +71,6 @@ The QGSM-simulated events (`data_*.dat`, 100 files × 2000 events) are not inclu
 
 Python 3 with `numpy`, `pandas`, `matplotlib`, `seaborn`, `scipy`, `scikit-learn`, `torch`.
 
-## Possible improvements
-
-- Normalising inputs and targets to $[0, 1]$.
-- Predicting energy per nucleon–nucleon pair instead of the total.
-- Deeper convolutional architectures.
-- A loss function that accounts for the physical bounds on the released energy and the resulting asymmetry of the errors.
 
 ## Copyright Notice
 
